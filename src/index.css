@@ -2,6 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutPage {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.page-transition {
+  width: 100%;
+  min-height: 100%;
+}
+
+.page-transition.fade-in {
+  animation: fadeInPage 0.4s ease-in-out forwards;
+}
+
+.page-transition.fade-out {
+  animation: fadeOutPage 0.3s ease-in-out forwards;
+}
+
 @font-face {
   /* This font could not be included automatically because of legal reasons.
      Please add it manually or switch to another font */

@@ -6,8 +6,8 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
 
-  publicDir: "./static",
-  base: "./",
+  publicDir: "./public",
+  base: "/",
 
   resolve: {
     alias: {
