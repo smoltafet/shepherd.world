@@ -1,0 +1,46 @@
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  /* Mobile styles */
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  padding: 1rem 1.6875rem;
+  border-radius: 0.75rem;
+  left: 0;
+  top: 100%;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Desktop styles - applies at 768px and above (this is what "md" means in Tailwind) */
+@media (min-width: 768px) {
+  .desktop-nav {
+    position: absolute;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    padding: 0;
+    border-radius: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
+
+.mobile-only {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
